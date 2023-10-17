@@ -9,10 +9,11 @@ body {
   font-family: "Roboto", sans-serif;
   align-items: center;
   background: linear-gradient(to right bottom, #ce1c09, #8e0e00, #1f1c18);
-  background-image: url("https://source.unsplash.com/1600x900/?wooden-table-top");
+  background-image: url("background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  backdrop-filter: blur(1px);
   background-position: 50% 50%;
 }
 
@@ -72,30 +73,42 @@ p {
   box-shadow: inset 20px 0 50px #d99d29;
 }
 
-.front .cover {
-  top: -1%;
-  position: relative;
-  width: 102%;
-  height: 102%;
-  position: absolute;
-  left: 0;
-  background: url(KaQ.png);
-  background-size: cover;
-  box-shadow: 0px 0px 3px 4px black;
-}
-
-.front .image {
+.front.cover {
+  top: 0;
   width: 100%;
   height: 100%;
   position: absolute;
   left: 0;
-  background: url("index.png");
+  background: url(KaQ.png);
+  padding: 0 13px;
+  box-sizing: border-box;
   background-size: cover;
-  box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 3px 4px black;
 }
-.front .image img {
-  display: none;
+
+.front.content ul {
+  margin: 0 1em;
+  margin-top: 3em;
+  line-height: 2.5em;
 }
+
+.front.content h2 {
+  position: relative;
+  font-family: "roborto";
+  font-weight: 100;
+  top: 5%;
+  left: 6%;
+  text-decoration: underline double;
+}
+.front.content li {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  border-bottom: 1px dotted;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+
 .back {
   position: absolute;
   width: 100%;
@@ -108,6 +121,33 @@ p {
   background-color: #000;
 }
 
+.back.cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  background-color: #fff;
+  box-shadow: inset 20px 0 50px #d99d29;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: auto;
+  flex-direction: column;
+}
+.back.cover p {
+  padding: 0 20px;
+  font-size: 15px;
+  text-align: center;
+  font-family: roborto;
+}
+.back.cover span {
+  padding-right: 20px;
+  align-self: flex-end;
+}
 .next-btn {
   position: absolute;
   bottom: 13px;
@@ -121,7 +161,7 @@ p {
   bottom: 13px;
   right: 13px;
   cursor: pointer;
-  color: #fff;
+  color: #000;
 }
 
 #p1 {
@@ -135,15 +175,16 @@ p {
 }
 #pend {
   z-index: 1;
-  top: -1%;
+  top: 0.5%;
   position: relative;
   width: 102%;
-  height: 102%;
+  height: 101%;
   box-shadow: 0px 0px 3px 4px black;
 }
 
 #c1:checked ~ .flip-book #p1 {
   transform: rotateY(-180deg);
+  height: 102%;
   z-index: 1;
 }
 #c2:checked ~ .flip-book #p2 {
