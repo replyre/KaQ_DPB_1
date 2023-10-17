@@ -72,7 +72,15 @@ p {
   padding: 0 13px;
   box-shadow: inset 20px 0 50px #d99d29;
 }
+.front h2 {
+  margin: 2em 1em;
+  border-bottom: 2px solid;
+}
 
+.front pre {
+  font-size: 15px;
+  line-height: 2em;
+}
 .front.cover {
   top: 0;
   width: 100%;
@@ -99,6 +107,7 @@ p {
   top: 5%;
   left: 6%;
   text-decoration: underline double;
+  border: none;
 }
 .front.content li {
   display: flex;
@@ -118,7 +127,11 @@ p {
   z-index: 99;
   transform: rotateY(180deg);
   backface-visibility: hidden;
-  background-color: #000;
+  background-color: #fff;
+  box-shadow: inset 20px 0 50px #d99d29;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .back.cover {
@@ -137,6 +150,13 @@ p {
   justify-content: center;
   padding: auto;
   flex-direction: column;
+}
+
+.back.img1 img {
+  height: 150px;
+  width: 150px;
+  align-self: flex-end;
+  margin-bottom: 20px;
 }
 .back.cover p {
   padding: 0 20px;
@@ -163,14 +183,25 @@ p {
   cursor: pointer;
   color: #000;
 }
-
+.back.end {
+  background-color: #000;
+  box-shadow: none;
+}
+footer {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+}
 #p1 {
-  z-index: 4;
+  z-index: 5;
 }
 #p2 {
-  z-index: 3;
+  z-index: 4;
 }
 #p3 {
+  z-index: 3;
+}
+#p4 {
   z-index: 2;
 }
 #pend {
@@ -195,7 +226,11 @@ p {
   transform: rotateY(-180deg);
   z-index: 3;
 }
-#cend:checked ~ .flip-book #pend {
+#c4:checked ~ .flip-book #p4 {
   transform: rotateY(-180deg);
   z-index: 4;
+}
+#cend:checked ~ .flip-book #pend {
+  transform: rotateY(-180deg);
+  z-index: 98;
 }
