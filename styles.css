@@ -364,13 +364,22 @@ footer {
   body {
     margin: auto;
     padding: 0;
-    height: 600px;
+    height: 630px;
     display: flex;
-    width: 650px;
+    width: 700px;
     justify-content: flex-end;
     font-family: "Roboto", sans-serif;
 
     backdrop-filter: blur(1px);
     overflow: scroll;
   }
+
+  .flip-book {
+  width: 350px;
+  height: 600px;
+  position: relative;
+  perspective: 1800px;
+}
+
+  
 }
