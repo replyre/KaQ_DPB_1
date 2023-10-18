@@ -4,18 +4,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS Only 3D Flip Book Animation Example</title>
+    <title>KaQ</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body onload="set()">
     <div class="book">
       <input type="checkbox" id="c1" />
       <input type="checkbox" id="c2" />
       <input type="checkbox" id="c3" />
       <input type="checkbox" id="c4" />
+      <input type="checkbox" id="c5" />
+      <input type="checkbox" id="c6" />
+      <input type="checkbox" id="c7" />
+      <input type="checkbox" id="c8" />
+      <input type="checkbox" id="c9" />
       <input type="checkbox" id="cend" />
       <div id="cover">
-        <!-- <img src="https://images.pexels.com/photos/7214434/pexels-photo-7214434.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt=""> -->
+        <!-- <img src="images/https://images.pexels.com/photos/7214434/pexels-photo-7214434.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt=""> -->
       </div>
       <div class="flip-book">
         <div class="flip" id="p1">
@@ -34,7 +46,7 @@
 
         <div class="flip" id="p2">
           <div class="back img1">
-            <img src="her_sight.png" alt="HerSight" />
+            <img src="images/her_sight.png" alt="HerSight" />
             <label for="c2" class="back-btn">Before</label>
           </div>
           <div class="front content">
@@ -43,28 +55,22 @@
               <li>Her Sight<span>2</span></li>
               <li>Presence<span>3</span></li>
               <li>Maria<span>4</span></li>
-              <li>Moonglide<span>5</span></li>
+              <li>Moonglade<span>5</span></li>
               <li>Try-Catch<span>6</span></li>
               <li>Oxytocin<span>7</span></li>
-              <li>New Life<span>8</span></li>
+              <li>New Life<sXpan>8</sXpan></li>
             </ul>
             <footer>1</footer>
-            <!-- <div class="image">
-              <img src="index.png" alt="index" />
-            </div> -->
             <label for="c2" class="next-btn">NEXT</label>
           </div>
         </div>
         <div class="flip" id="p3">
-          <div class="back">
-            <img
-              src="https://images.pexels.com/photos/1998630/pexels-photo-1998630.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-              alt=""
-            />
+          <div class="back img2">
+            <img src="images/door.png" alt="" />
             <label for="c3" class="back-btn">Before</label>
           </div>
           <div class="front">
-            <h2>Her Sight</h2>
+            <h2 style="margin-left: 12px">Her Sight</h2>
             <pre>
   It was a dark denim night,
   Gloomed by the scarcity of light,
@@ -80,27 +86,164 @@
           </div>
         </div>
         <div class="flip" id="p4">
-          <div class="back">
-            <img
-              src="https://images.pexels.com/photos/1998630/pexels-photo-1998630.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-              alt=""
-            />
+          <div class="back img3">
+            <img src="images/maria.jpg" alt="" />
             <label for="c4" class="back-btn">Before</label>
           </div>
           <div class="front">
-            <h2>Her Sight</h2>
-            <pre>
-  It was a dark denim night,
-  Gloomed by the scarcity of light,
-  I saw a beautiful shade,
-  Too dim to recognize,
-  Aloaf of the world,
-  In her deep prayers,
-  She might have sought the peace,
-  I was perceiving by her sight.
+            <h2 style="margin-left: 10px">Presence</h2>
+            <pre style="font-style: italic">
+ Tum shyd khwaabon mai ate ho
+ Per hum sote puri raat nahi
+ Mai padna chahu tujhe 
+ Per tum khuli koi kitaab nahi,
+ Mai chahu rahana pass tere,
+ Per tum rahate door us minar kahi,
+ Band darwazo mai rahate ho,
+ Per band aakho se dikte ho,
+ Ye bhi batao bhala koi baat hui?
             </pre>
-            <footer>2</footer>
+            <footer>3</footer>
             <label for="c4" class="next-btn">NEXT</label>
+          </div>
+        </div>
+        <div class="flip" id="p5">
+          <div class="back img4">
+            <img src="images/moonglide.jpg" alt="" />
+            <label for="c5" class="back-btn" style="z-index: 1; color: white"
+              >Before</label
+            >
+          </div>
+          <div class="front">
+            <h2 style="margin-bottom: 1em; margin-left: 12px">María</h2>
+            <pre>
+  Eyes blue, marine
+  when winks, rushes my dopamine
+  sparkles when she swings
+  fairy, miracle, without wings
+  beauty, queen, Esra in Diriliş
+  maybe
+  a tear drop off Nebula Helix
+  or Ahalya's forgotten twin
+  or Hennessy, high, a royal dream
+  firmament, my mind, a blank screen
+  and she is the film.
+            </pre>
+            <footer>4</footer>
+            <label for="c5" class="next-btn">NEXT</label>
+          </div>
+        </div>
+        <div class="flip" id="p6">
+          <div class="back img1">
+            <img src="images/quill.png" alt="" />
+            <label for="c6" class="back-btn">Before</label>
+          </div>
+          <div class="front">
+            <h2 style="margin-left: 0">Moonglade</h2>
+            <pre>
+You are so beautiful,
+<span>Tum me koi bhi kami nahi,</span>
+I got everything else
+<span>Hume bas tumhari hi kami thi,</span>
+You love daisies and daffodils
+Let them bloom, <span>hume koi jaldi nahi</span> 
+The moon's reflection in water is you
+Kyōka Suigetsu;<span> kya ye doori hi karibi.</span>
+            </pre>
+            <footer>5</footer>
+            <label for="c6" class="next-btn">NEXT</label>
+          </div>
+        </div>
+        <div class="flip" id="p7">
+          <div class="back img1">
+            <img src="images/rose.png" alt="" />
+            <label for="c7" class="back-btn">Before</label>
+          </div>
+          <div class="front">
+            <h2 style="margin-bottom: 1em; margin-left: 8px">Try-Catch</h2>
+            <pre style="font-size: 14px; line-height: 20px">
+ Every time I try to press sleep
+ the memoirs don't let the eyelids 
+ fasten,
+ Every time I wake up in reality
+ the creases on my bed-sheet are scars 
+ brazen.
+
+ Every time I try to walk straight
+ I follow tens of different directions,
+ Every time I think to call a friend
+ I end up talking to my own reflection.
+
+ Every time I try to forget you
+ the moonlight drenches me in your 
+ beauty,
+ Every time I decide not to write
+ my pen derides, "what reminds you of 
+ me?"
+            </pre>
+            <footer>6</footer>
+            <label for="c7" class="next-btn">NEXT</label>
+          </div>
+        </div>
+        <div class="flip" id="p8">
+          <div class="back img1">
+            <img src="images/lamp.png" alt="" />
+            <label for="c8" class="back-btn">Before</label>
+          </div>
+          <div class="front">
+            <h2 style="margin-bottom: 1em; margin-left: 0px">Oxytocin</h2>
+            <pre style="font-size: 14px; line-height: 20px">
+Love at first sight
+is like a blooming rose
+if you're eyes caught one
+there is no escaping the voodoo.
+
+With time as more petals grow
+more of her beauty in you glows
+blows mind, rings like telephone
+uncontrollable, you just want more.
+
+But being ephemeral, it's gonna die
+love is just a feeling, you will 
+realise
+passing months it will decay and perish
+and as life goes on, a new bud will 
+arise.
+            </pre>
+            <footer>7</footer>
+            <label for="c8" class="next-btn">NEXT</label>
+          </div>
+        </div>
+
+        <div class="flip" id="p9">
+          <div class="back last">
+            <div></div>
+            <label for="c9" class="back-btn">Before</label>
+          </div>
+          <div class="front">
+            <h2 style="margin-bottom: 1em; margin-left: 0px">New Life</h2>
+            <pre style="font-size: 14px; line-height: 20px">
+It didn't last forever that doesn't
+mean it wasn't worth the while,
+Run the dials and tell your friends
+they are the best gift of your life.
+
+We swim in the pool of achievements
+overlooking the luck that tiles
+reflect,
+But it's the egocentric bias that 
+helps us grow
+so I got no problem with that.
+
+Would love to sit and smoke more time
+watching that stagnant clock with 
+cracks,
+But it's time my hand should reach 
+the button deep in my head and 
+the clockwork to reset.
+            </pre>
+            <footer>8</footer>
+            <label for="c9" class="next-btn">NEXT</label>
           </div>
         </div>
         <div class="flip" id="pend">
@@ -110,13 +253,35 @@
             >
           </div>
           <div class="front">
-            <h2>strawberry</h2>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus
-              sunt consectetur iusto sint architecto beatae fuga, quasi,
-              repellendus tempora cum eaque? Incidunt modi laudantium fugit
-              nostrum ipsam consectetur. Illum, dolorum!
-            </p>
+            <h2>Author's Page</h2>
+            <div class="work">
+              <h3>Read my other works:</h3>
+              <p>
+                <img src="images/all_poetry.jpg" />
+                <a href="https://allpoetry.com/Esoteric_Artist"
+                  >@Esoteric Artist</a
+                >
+              </p>
+            </div>
+            <div class="connect">
+              <h3>Connect with me:</h3>
+              <div class="social">
+                <p>
+                  <i class="fa-brands fa-square-instagram"></i>
+                  <a href="https://www.instagram.com/wayward_rahul/">
+                    @wayward_rahul</a
+                  >
+                </p>
+                <p>
+                  <i class="fa-brands fa-linkedin"></i>
+                  <a href="https://www.linkedin.com/in/replyr/"> Rahul Gupta</a>
+                </p>
+                <p>
+                  <i class="fa-brands fa-github"></i>
+                  <a href="https://github.com/replyre"> @replyre</a>
+                </p>
+              </div>
+            </div>
             <label for="cend" class="next-btn">NEXT</label>
           </div>
         </div>
@@ -145,6 +310,18 @@
 
       ga("create", "UA-46156385-1", "cssscript.com");
       ga("send", "pageview");
+
+      var sound = new Audio("page_turn.mp3");
+      var buttons = document.querySelectorAll('input[type="checkbox"]');
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          sound.play();
+        });
+      });
+      function set() {
+        const btn = document.querySelector(".book");
+        return btn.scrollIntoView();
+      }
     </script>
   </body>
 </html>
