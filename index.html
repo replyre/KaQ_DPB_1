@@ -14,7 +14,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body onload="set()">
+  <body>
     <div class="book">
       <input type="checkbox" id="c1" />
       <input type="checkbox" id="c2" />
@@ -318,10 +318,6 @@ the clockwork to reset.
           sound.play();
         });
       });
-      function set() {
-        const btn = document.querySelector(".book");
-        return btn.scrollIntoView();
-      }
     </script>
   </body>
 </html>
