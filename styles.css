@@ -208,6 +208,7 @@ pre span {
   color: #000;
   height: 100px;
   width: 100px;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .back-btn:hover,
