@@ -4,6 +4,8 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
+  margin: auto;
+  width: 100vw;
   display: flex;
   justify-content: center;
   font-family: "Roboto", sans-serif;
@@ -15,15 +17,11 @@ body {
   background-attachment: fixed;
   backdrop-filter: blur(1px);
   background-position: 50% 50%;
+  overflow: hidden;
 }
 
 input {
   display: none;
-}
-
-img {
-  width: 100%;
-  height: 100%;
 }
 
 .book {
@@ -189,20 +187,32 @@ pre span {
   padding-right: 20px;
   align-self: flex-end;
 }
+/* .next-btn {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  cursor: pointer;
+  color: #000;
+  background-color: #d99d29;
+} */
+
+.back-btn,
 .next-btn {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   bottom: 13px;
-  right: 13px;
+  right: 1px;
   cursor: pointer;
   color: #000;
+  height: 100px;
+  width: 100px;
 }
 
-.back-btn {
-  position: absolute;
-  bottom: 13px;
-  right: 13px;
-  cursor: pointer;
-  color: #000;
+.back-btn:hover,
+.next-btn:hover {
+  transform: scale(1.1);
 }
 .back.end {
   background-color: #000;
@@ -432,7 +442,6 @@ footer {
     justify-content: flex-end;
     font-family: "Roboto", sans-serif;
     padding: 20px;
-
     backdrop-filter: blur(1px);
     overflow: scroll;
   }
