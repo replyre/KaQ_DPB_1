@@ -15,7 +15,19 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="book">
+    <div class="center">
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div>
+    <div class="book hide">
       <input type="checkbox" id="c1" />
       <input type="checkbox" id="c2" />
       <input type="checkbox" id="c3" />
@@ -318,6 +330,13 @@ the clockwork to reset.
           sound.play();
         });
       });
+
+      setTimeout(() => {
+        document.querySelector(".center").classList.add("hide");
+      }, 5000);
+      setTimeout(() => {
+        document.querySelector(".book").classList.remove("hide");
+      }, 5000);
     </script>
   </body>
 </html>
