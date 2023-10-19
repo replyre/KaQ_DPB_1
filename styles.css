@@ -8,7 +8,7 @@ body {
   justify-content: center;
   font-family: "Roboto", sans-serif;
   align-items: center;
-  background: linear-gradient(to right bottom, #ce1c09, #8e0e00, #1f1c18);
+  background-color: #000;
   background-image: url("images/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -81,16 +81,10 @@ p {
   font-size: 15px;
   line-height: 2em;
 }
-
-pre {
-  white-space: pre-wrap; /* Since CSS 2.1 */
-  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
-  white-space: -pre-wrap; /* Opera 4-6 */
-  white-space: -o-pre-wrap; /* Opera 7 */
-  word-wrap: break-word; /* Internet Explorer 5.5+ */
-}
 .front.cover {
+  background-color: #000;
   background: url("images/KaQ.png");
+
   background-size: cover;
   box-shadow: 0px 0px 3px 4px black;
 }
@@ -368,18 +362,78 @@ footer {
   z-index: 98;
 }
 
-@media screen and (max-width: 800px) {
+.center {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+.wave {
+  width: 5px;
+  height: 500px;
+  background: linear-gradient(45deg, black, red, black);
+  margin: 10px;
+  animation: wave 1s linear infinite;
+  border-radius: 20px;
+}
+.wave:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.wave:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.wave:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.wave:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.wave:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.wave:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.wave:nth-child(8) {
+  animation-delay: 0.7s;
+}
+.wave:nth-child(9) {
+  animation-delay: 0.8s;
+}
+.wave:nth-child(10) {
+  animation-delay: 0.9s;
+}
+
+@keyframes wave {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+.hide {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
   body {
     margin: auto;
     padding: 0;
-    height: 600px;
+    max-height: 100vh;
     display: flex;
-    width: 850px;
+    align-items: center;
+    width: 840px;
     justify-content: flex-end;
     font-family: "Roboto", sans-serif;
+    padding: 20px;
 
     backdrop-filter: blur(1px);
     overflow: scroll;
   }
-  
 }
