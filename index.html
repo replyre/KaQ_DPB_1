@@ -49,10 +49,10 @@
               it goes on."
             </p>
             <span>-Robert Frost</span>
-            <label for="c1" class="back-btn">Before</label>
+            <label for="c1" class="back-btn moveLeft">Before</label>
           </div>
           <div class="front cover">
-            <label for="c1" class="next-btn">NEXT</label>
+            <label for="c1" class="next-btn moveRight">NEXT</label>
           </div>
         </div>
 
@@ -294,7 +294,7 @@ the clockwork to reset.
                 </p>
               </div>
             </div>
-            <label for="cend" class="next-btn">NEXT</label>
+            <label for="cend" class="next-btn lastRight">NEXT</label>
           </div>
         </div>
       </div>
@@ -330,6 +330,61 @@ the clockwork to reset.
           sound.play();
         });
       });
+      if (window.innerWidth > 800) {
+        document.querySelector(".moveRight").addEventListener("click", () => {
+          let book = document.querySelector(".book");
+          book.style.cssText =
+            "transform:translateX(170px); transition: all 0.4s ease-in";
+        });
+
+        document.querySelector(".moveLeft").addEventListener("click", () => {
+          let book = document.querySelector(".book");
+          book.style.cssText =
+            "transform:translateX(-100px); transition: all 0.4s ease-in";
+        });
+      }
+      if (window.innerWidth <= 600) {
+        document.querySelectorAll(".front").forEach((page, index) => {
+          const newDiv = document.createElement("div");
+          const TextNode = document.createTextNode("Left");
+          newDiv.appendChild(TextNode);
+          newDiv.classList.add("left-btn");
+          page.appendChild(newDiv);
+        });
+        document.querySelectorAll(".back").forEach((page, index) => {
+          const newDiv = document.createElement("div");
+          const TextNode = document.createTextNode("Right");
+          newDiv.appendChild(TextNode);
+          newDiv.classList.add("right-btn");
+          page.appendChild(newDiv);
+        });
+
+        document.querySelectorAll(".left-btn").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            let book = document.querySelector(".book");
+            book.style.cssText =
+              "transform: translateX(320px); transition: all 0.4s ease-in";
+          });
+        });
+        document.querySelectorAll(".right-btn").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            let book = document.querySelector(".book");
+            book.style.cssText =
+              "transform: translateX(-42px); transition: all 0.4s ease-in";
+          });
+        });
+        document.querySelector(".front.cover .left-btn").classList.add("hide");
+        document.querySelector(".lastRight").addEventListener("click", () => {
+          let book = document.querySelector(".book");
+          book.style.cssText =
+            "transform:translateX(320px); transition: all 0.4s ease-in";
+        });
+        document.querySelector(".moveLeft").addEventListener("click", () => {
+          let book = document.querySelector(".book");
+          book.style.cssText =
+            "transform:translateX(-20px); transition: all 0.4s ease-in";
+        });
+      }
 
       setTimeout(() => {
         document.querySelector(".center").classList.add("hide");

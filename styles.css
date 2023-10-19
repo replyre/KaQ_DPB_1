@@ -196,7 +196,7 @@ pre span {
   background-color: #d99d29;
 } */
 
-.back-btn,
+.right-btn,
 .next-btn {
   position: absolute;
   display: flex;
@@ -211,9 +211,25 @@ pre span {
   -webkit-tap-highlight-color: transparent;
 }
 
+.left-btn,
+.back-btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  bottom: 13px;
+  left: 1px;
+  cursor: pointer;
+  color: #000;
+  height: 100px;
+  width: 100px;
+  -webkit-tap-highlight-color: transparent;
+  z-index: 1;
+}
+
 .back-btn:hover,
 .next-btn:hover {
-  transform: scale(1.1);
+  font-weight: bold;
 }
 .back.end {
   background-color: #000;
@@ -432,18 +448,55 @@ footer {
   display: none;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
   body {
-    margin: auto;
-    padding: 0;
-    max-height: 100vh;
-    display: flex;
-    align-items: center;
-    width: 840px;
-    justify-content: flex-end;
+    flex-direction: column;
     font-family: "Roboto", sans-serif;
-    padding: 20px;
     backdrop-filter: blur(1px);
-    overflow: scroll;
   }
+
+  .flip-book {
+    height: 500px;
+    width: 320px;
+  }
+
+  .book {
+    align-self: flex-end;
+    margin-right: 20px;
+  }
+
+  pre {
+    font-size: 13px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    flex-direction: column;
+    font-family: "Roboto", sans-serif;
+    backdrop-filter: blur(1px);
+  }
+
+  .flip-book {
+    height: 500px;
+    width: 320px;
+  }
+
+  .book {
+    align-self: flex-end;
+    margin-right: 20px;
+  }
+
+  pre {
+    white-space: pre-wrap; /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */
+    white-space: -o-pre-wrap; /* Opera 7 */
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+    font-size: 13px !important;
+  }
+}
+
+.hide {
+  display: none;
 }
