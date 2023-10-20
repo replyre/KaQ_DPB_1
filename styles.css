@@ -18,6 +18,7 @@ body {
   backdrop-filter: blur(1px);
   background-position: 50% 50%;
   overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
 }
 
 input {
@@ -235,7 +236,9 @@ pre span {
   background-color: #000;
   box-shadow: none;
 }
-
+#pend .front .next-btn {
+  height: 60px;
+}
 .back.last {
   background: url("images/EA.png");
   background-size: cover;
@@ -336,7 +339,10 @@ footer {
   justify-content: space-between;
   align-items: center;
 }
-
+#pend .front .connect .social p img {
+  height: 25px;
+  width: 25px;
+}
 #pend .front .connect .social i {
   font-size: 20px;
 }
@@ -503,4 +509,17 @@ footer {
 
 .hide {
   display: none;
+}
+
+.attr {
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: -99;
+}
+.attr a {
+  text-decoration: none;
+  font-weight: 200;
+  color: inherit;
 }
